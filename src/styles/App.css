@@ -1,0 +1,53 @@
+/* Base Application Styles */
+body {
+  background: #2c3e50;
+  padding: 15px;
+  color: #bdc3c7;
+  font-weight: bold;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-column{
+  /*position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  height: 100%;*/
+  flex-direction: column;
+  align-content: stretch;
+}
+
+.item{
+  flex-grow: 1;
+}
+
+.main{}
+
+header{
+  margin-bottom: 25px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li{}
+
+.label{
+  font-size:6em;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: nowrap;
+  border: 1px solid #e74c3c;
+}
+
+.inner-list li{
+  padding: 25px;
+}
+
+.inner-list li:first-child{
+  border-bottom: 1px solid #7f8c8d;
+}
