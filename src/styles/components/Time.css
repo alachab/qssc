@@ -1,11 +1,10 @@
 .time{
-	align-self: flex-end;
 	text-align: right;
 }
 
 .hero-circle{
-				width:320px;
-				height:320px;
+				width:450px;
+				height:450px;
 				position:relative;
 				border:8px solid #B96B6B;
 				border-radius:50%;

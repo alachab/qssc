@@ -6,14 +6,20 @@ body {
   font-weight: bold;
 }
 
+#app, .wrapper{
+  position: absolute;
+  left:0; right: 0; top: 0; bottom: 0;
+}
+
+.wrapper{
+  padding: 15px;
+}
+
 .flex{
   display: flex;
 }
 
 .flex-column{
-  /*position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
-  height: 100%;*/
   flex-direction: column;
   align-content: stretch;
 }
@@ -22,11 +28,7 @@ body {
   flex-grow: 1;
 }
 
-.main{}
-
-header{
-  margin-bottom: 25px;
-}
+header{}
 
 ul{
   list-style: none;
@@ -37,7 +39,7 @@ ul{
 li{}
 
 .label{
-  font-size:6em;
+  font-size:4vw;
   text-align: center;
   text-transform: uppercase;
   word-wrap: nowrap;
