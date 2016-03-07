@@ -1,2 +1,2 @@
 # qssc
-Small Schedule App
+Small Schedule App ;
