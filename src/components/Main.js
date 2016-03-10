@@ -7,8 +7,7 @@ import 'whatwg-fetch';
 import TimeComponent from './components/TimeComponent';
 import DateComponent from './components/DateComponent';
 import ListAdhanTimeComponent from './components/ListAdhanTimeComponent';
-import AdComponent from './components/AdComponent';
-
+import NextComponent from './components/NextComponent';
 
 var AppComponent = React.createClass({
 
@@ -37,7 +36,7 @@ var AppComponent = React.createClass({
           <DateComponent />
           <TimeComponent />
         </header>
-        <AdComponent />
+        <NextComponent />
         <ListAdhanTimeComponent prayers={this.state.data.prayers} />
     </div>
     );

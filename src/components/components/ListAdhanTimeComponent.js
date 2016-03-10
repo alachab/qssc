@@ -14,28 +14,28 @@ var ListAdhanTimeComponent = React.createClass({
     var current =  prayers.items.filter( item => item.date_for === today )[0];
       return (
           <ul className="item flex">
-            <li className="item flex label">
+            <li className="item flex label sep">
                 <ul className="inner-list flex flex-column">
                   <li className="item">fajr</li>
                   <li className="item">{current.fajr}</li>
                   <li className="item">{current.fajr}</li>
                 </ul>
             </li>
-            <li className="item flex label">
+            <li className="item flex label sep">
                 <ul className="inner-list flex flex-column">
                   <li className="item">dhuhr</li>
                   <li className="item">{current.dhuhr}</li>
                   <li className="item">{current.dhuhr}</li>
                 </ul>
             </li>
-            <li className="item flex label">
+            <li className="item flex label sep">
                 <ul className="inner-list flex flex-column">
                   <li className="item">asr</li>
                   <li className="item">{current.asr}</li>
                   <li className="item">{current.asr}</li>
                 </ul>
             </li>
-            <li className="item flex label">
+            <li className="item flex label sep">
                 <ul className="inner-list flex flex-column">
                   <li className="item">maghrib</li>
                   <li className="item">{current.maghrib}</li>
