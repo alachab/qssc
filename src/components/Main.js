@@ -3,6 +3,7 @@ require('styles/App.css');
 
 import React from 'react';
 import 'whatwg-fetch';
+import { Link } from 'react-router';
 
 import TimeComponent from './components/TimeComponent';
 import DateComponent from './components/DateComponent';
