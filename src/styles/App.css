@@ -12,7 +12,7 @@ h3{
 }
 
 input{
-  
+
 }
 
 #app, .wrapper{
@@ -61,6 +61,12 @@ li{}
   word-wrap: nowrap;
   border: 1px solid #e74c3c;
 }
+@media screen and (min-width: 600px) and (min-width: 1200px){
+  .label{
+    font-size:2vw;
+  }
+}
+
 
 .inner-list li{
   padding: 25px;
