@@ -2,6 +2,7 @@ require('styles/components/Admin.css');
 
 import React from 'react';
 import 'whatwg-fetch';
+import Form from '../components/Form';
 
 var AdminComponent = React.createClass({
 
@@ -27,25 +28,7 @@ var AdminComponent = React.createClass({
       <div className="flex flex-column wrapper">
         <div className="box">
           <h3>Qssc Admin</h3>
-          <form>
-            <div className="flex-column fbox">
-              <div className="item">User</div>
-              <div className="item">
-                  <input type="text" name="user" />
-              </div>
-            </div>
-            <div className="flex-column fbox">
-              <div className="item">Password</div>
-              <div className="item">
-                  <input type="password" name="user" />
-              </div>
-            </div>
-            <div className="flex-column fbox">
-              <div className="item">
-                <button>go</button>
-              </div>
-            </div>
-          </form>
+          <Form />
         </div>
       </div>
     );
