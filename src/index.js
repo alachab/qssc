@@ -1,7 +1,14 @@
 import 'core-js/fn/object/assign';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/Main';
+import { render } from 'react-dom';
+import { Router, Route, browserHistory } from 'react-router';
 
-// Render the main component into the dom
-ReactDOM.render(<App />, document.getElementById('app'));
+import App   from './components/Main';
+import Admin from './components/modules/Admin';
+
+render((
+  <Router history={browserHistory}>
+    <Route path="/" component={App}></Route>
+    <Route path="admin" component={Admin}></Route>
+  </Router>
+), document.getElementById('app'));

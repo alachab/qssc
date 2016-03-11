@@ -3,11 +3,12 @@ require('styles/App.css');
 
 import React from 'react';
 import 'whatwg-fetch';
+import { Link } from 'react-router';
 
 import TimeComponent from './components/TimeComponent';
 import DateComponent from './components/DateComponent';
 import ListAdhanTimeComponent from './components/ListAdhanTimeComponent';
-
+import NextComponent from './components/NextComponent';
 
 var AppComponent = React.createClass({
 
@@ -31,17 +32,13 @@ var AppComponent = React.createClass({
 
   render() {
     return (
-      <div className="flex flex-column">
-        <header className="flex">
+      <div className="flex flex-column wrapper">
+        <header className="item flex">
           <DateComponent />
           <TimeComponent />
         </header>
-        <div className="main">
-          <div className="item content">
-            <ListAdhanTimeComponent prayers={this.state.data.prayers} />
-          </div>
-          <div className="item ad"></div>
-        </div>
+        <NextComponent />
+        <ListAdhanTimeComponent prayers={this.state.data.prayers} />
     </div>
     );
   }

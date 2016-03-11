@@ -13,50 +13,43 @@ var ListAdhanTimeComponent = React.createClass({
     if (!prayers.items) return <h1>Loading...</h1>;
     var current =  prayers.items.filter( item => item.date_for === today )[0];
       return (
-        <div>
-          <ul className="flex">
-            <li className="item label">
-              <div>
-                <ul className="inner-list">
-                  <li>fajr</li>
-                  <li>{current.fajr}</li>
+          <ul className="item flex">
+            <li className="item flex label sep">
+                <ul className="inner-list flex flex-column">
+                  <li className="item">fajr</li>
+                  <li className="item">{current.fajr}</li>
+                  <li className="item">{current.fajr}</li>
                 </ul>
-              </div>
             </li>
-            <li className="item label">
-              <div>
-                <ul className="inner-list">
-                  <li>dhuhr</li>
-                  <li>{current.dhuhr}</li>
+            <li className="item flex label sep">
+                <ul className="inner-list flex flex-column">
+                  <li className="item">dhuhr</li>
+                  <li className="item">{current.dhuhr}</li>
+                  <li className="item">{current.dhuhr}</li>
                 </ul>
-              </div>
             </li>
-            <li className="item label">
-              <div>
-                <ul className="inner-list">
-                  <li>asr</li>
-                  <li>{current.asr}</li>
+            <li className="item flex label sep">
+                <ul className="inner-list flex flex-column">
+                  <li className="item">asr</li>
+                  <li className="item">{current.asr}</li>
+                  <li className="item">{current.asr}</li>
                 </ul>
-              </div>
             </li>
-            <li className="item label">
-              <div>
-                <ul className="inner-list">
-                  <li>maghrib</li>
-                  <li>{current.maghrib}</li>
+            <li className="item flex label sep">
+                <ul className="inner-list flex flex-column">
+                  <li className="item">maghrib</li>
+                  <li className="item">{current.maghrib}</li>
+                  <li className="item">{current.maghrib}</li>
                 </ul>
-              </div>
             </li>
-            <li className="item label">
-              <div>
-                <ul className="inner-list">
-                  <li>isha</li>
-                  <li>{current.isha}</li>
+            <li className="item flex label">
+                <ul className="inner-list flex flex-column">
+                  <li className="item">isha</li>
+                  <li className="item">{current.isha}</li>
+                  <li className="item">{current.isha}</li>
                 </ul>
-              </div>
             </li>
           </ul>
-        </div>
       );
   }
 

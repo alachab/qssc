@@ -1,0 +1,19 @@
+.box{
+  width: 320px;
+  padding: 15px;
+  margin: 0 auto;
+  border: 1px solid #c0392b;
+}
+
+
+.box h3{
+  text-align: center;
+}
+
+.box .item{
+  text-align: left;
+}
+
+.fbox:first-child{
+  margin:10px 0;
+}
