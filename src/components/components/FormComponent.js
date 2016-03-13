@@ -13,15 +13,17 @@ var FormComponent = React.createClass({
         pass : 'qssc'
       },
       defaults : {
-        user : 'test',
-        pass : 'test',
+        user : 'hey',
+        pass : 'hey',
       }
     };
   },
 
   onSubmit : function(){},
 
-  onChange : function(){},
+  handleChange : function(evt){
+    evt.target.name === 'user' ? this.setState({defaults: {user : evt.target.value}}) : this.setState({defaults: {pass : evt.target.value}}) ;
+  },
 
   render() {
     return (
@@ -29,13 +31,19 @@ var FormComponent = React.createClass({
           <div className="flex-column fbox">
             <div className="item">User</div>
             <div className="item">
-                <input type="text" name="user" value={this.state.defaults.user} />
+                <input type="text"
+                       name="user"
+                       onChange={this.handleChange}
+                       value={this.state.defaults.user} />
             </div>
           </div>
           <div className="flex-column fbox">
             <div className="item">Password</div>
             <div className="item">
-                <input type="password" name="user" value={this.state.defaults.pass} />
+                <input type="password"
+                       name="pass"
+                       onChange={this.handleChange}
+                       value={this.state.defaults.pass} />
             </div>
           </div>
           <div className="flex-column fbox">

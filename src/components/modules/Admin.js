@@ -2,7 +2,7 @@ require('styles/components/Admin.css');
 
 import React from 'react';
 import 'whatwg-fetch';
-import Form from '../components/Form';
+import Form from '../components/FormComponent';
 
 var AdminComponent = React.createClass({
 
