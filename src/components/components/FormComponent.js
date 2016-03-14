@@ -1,40 +1,58 @@
 'use strict';
 
 import React from 'react';
+import { browserHistory } from 'react-router';
+import admin from '../../models/admin';
 
 require('styles/components/Form.css');
 
 var FormComponent = React.createClass({
 
   getInitialState: function() {
-    return {
-      login : {
-        user : 'qssc',
-        pass : 'qssc'
-      },
-      defaults : {
-        user : 'hey',
-        pass : 'hey',
-      }
-    };
+    return {user : '', pass : ''};
   },
 
-  onSubmit : function(){},
+  handleSubmit: function(e) {
+    e.preventDefault();
 
-  handleChange : function(evt){
-    evt.target.name === 'user' ? this.setState({defaults: {user : evt.target.value}}) : this.setState({defaults: {pass : evt.target.value}}) ;
+    var user = this.state.user.trim();
+    var pass = this.state.pass.trim();
+
+    if (!pass || !user) {
+      return;
+    }
+
+    if( pass !== admin.pass && user !== admin.user ){
+      this.setState({user: '',pass: ''});
+      return;
+    }
+
+    //TODO : store login session
+    browserHistory.push('/admin/success');
+
+  },
+
+  handlePassword : function(evt){
+    console.log('handlePassword called ', evt.target.value);
+    this.setState({pass : evt.target.value});
+  },
+
+  handleUser : function(evt){
+    console.log('handleUser called ', evt.target.value);
+    this.setState({user : evt.target.value});
   },
 
   render() {
     return (
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div className="flex-column fbox">
             <div className="item">User</div>
             <div className="item">
                 <input type="text"
                        name="user"
-                       onChange={this.handleChange}
-                       value={this.state.defaults.user} />
+                       placeholder="hey man"
+                       onChange={this.handleUser}
+                       value={this.state.user} />
             </div>
           </div>
           <div className="flex-column fbox">
@@ -42,13 +60,14 @@ var FormComponent = React.createClass({
             <div className="item">
                 <input type="password"
                        name="pass"
-                       onChange={this.handleChange}
-                       value={this.state.defaults.pass} />
+                       placeholder="password"
+                       onChange={this.handlePassword}
+                       value={this.state.pass} />
             </div>
           </div>
           <div className="flex-column fbox">
             <div className="item">
-              <button>go</button>
+              <input type="submit" value="Post" />
             </div>
           </div>
         </form>
