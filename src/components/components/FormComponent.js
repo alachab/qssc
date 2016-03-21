@@ -67,7 +67,7 @@ var FormComponent = React.createClass({
           </div>
           <div className="flex-column fbox">
             <div className="item">
-              <input type="submit" value="Post" />
+              <input type="submit" value="Submit" />
             </div>
           </div>
         </form>

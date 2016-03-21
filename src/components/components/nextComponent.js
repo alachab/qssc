@@ -14,12 +14,6 @@ var NextComponent = React.createClass({
               <li className="item">Fajr</li>
             </ul>
         </li>
-        <li className="item flex label sep">
-          <ul className="inner-list flex flex-column">
-            <li className="item">Adhan</li>
-            <li className="item">1 pm</li>
-          </ul>
-        </li>
         <li className="item flex label">
           <ul className="inner-list flex flex-column">
             <li className="item">Iqama</li>

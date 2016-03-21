@@ -8,7 +8,8 @@ var AdComponent = React.createClass({
   render() {
     return (
       <div className="item ad">
-        Ad
+        Ad : {this.props.title}
+        Ad : {this.props.content}
       </div>
     );
   }

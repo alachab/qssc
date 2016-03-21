@@ -3,31 +3,28 @@ require('styles/App.css');
 
 import React from 'react';
 import 'whatwg-fetch';
-import { Link } from 'react-router';
 
 import TimeComponent from './components/TimeComponent';
 import DateComponent from './components/DateComponent';
 import ListAdhanTimeComponent from './components/ListAdhanTimeComponent';
 import NextComponent from './components/NextComponent';
 
+import Api from '../services/api';
+
 var AppComponent = React.createClass({
 
-  getInitialState: function() {
-    return {data: {
-      prayers : {},
-      iqama : {}
-    }};
+  getInitialState() {
+    return { qssc: {} };
+  },
+
+  componentWillMount(){
+    Api.store();
   },
 
   componentDidMount(){
-    fetch('../models/prayers.json')
-        .then( response => {
-          return response.json();
-        }).then(prayers => {
-          this.setState({data:{prayers:prayers}});
-        }).catch((err) => {
-          console.log('err ', err);
-        });
+    Api.getItem( Api.getKey() ).then((qssc) => {
+      this.setState({qssc:qssc});
+    });
   },
 
   render() {
@@ -38,7 +35,7 @@ var AppComponent = React.createClass({
           <TimeComponent />
         </header>
         <NextComponent />
-        <ListAdhanTimeComponent prayers={this.state.data.prayers} />
+        <ListAdhanTimeComponent qssc={this.state.qssc} />
     </div>
     );
   }
