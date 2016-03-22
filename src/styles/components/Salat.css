@@ -1,0 +1,12 @@
+.salat{
+  border: 1px solid;
+  margin: 25px;
+  padding-bottom: 15px;
+}
+
+.salat h2{
+  text-transform: uppercase;
+}
+.timepicker-info{
+  width : auto !important;
+}

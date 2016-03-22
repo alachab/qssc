@@ -5,11 +5,11 @@ var Api = (function(){
   var isSync = false;
 
   var qssc = {
-    fajr : '06:30AM',
-    dhuhr : '01:45PM',
-    asr : '05:45PM',
-    maghrib : '07:30PM',
-    isha : '09:00PM'
+    fajr : '06:30 AM',
+    dhuhr : '01:45 PM',
+    asr : '05:45 PM',
+    maghrib : '07:30 PM',
+    isha : '09:00 PM'
   };
 
   var ad = {
@@ -36,7 +36,7 @@ var Api = (function(){
     });
   }
 
-  function getItem(key){
+  function getItem(key="qssc"){
     return localforage.getItem(key);
   }
 

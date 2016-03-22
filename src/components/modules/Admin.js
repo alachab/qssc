@@ -1,28 +1,9 @@
 require('styles/components/Admin.css');
 
 import React from 'react';
-import 'whatwg-fetch';
 import Form from '../components/FormComponent';
 
 var AdminComponent = React.createClass({
-
-  getInitialState: function() {
-    return {data: {
-      iqama : {}
-    }};
-  },
-
-  componentDidMount(){
-    fetch('../models/prayers.json')
-        .then( response => {
-          return response.json();
-        }).then(prayers => {
-
-        }).catch((err) => {
-          console.log('err ', err);
-        });
-  },
-
   render() {
     return (
       <div className="flex flex-column wrapper">

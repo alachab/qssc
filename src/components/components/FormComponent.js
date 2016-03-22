@@ -34,13 +34,7 @@ var FormComponent = React.createClass({
 
     store.dispatch(logIn(true));
     browserHistory.push('/admin/success');
-    
-  },
 
-  componentDidMount: function() {
-    store.subscribe(() => {
-        console.log('state ', store.getState());
-    })
   },
 
   handlePassword : function(evt){
