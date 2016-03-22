@@ -1,8 +1,11 @@
-const admin = (state, action) => {
+import {USER_LOGIN} from '../actions';
+
+const admin = (state = {}, action) => {
   switch (action.type) {
-    case 'USER_LOGIN':
+    case USER_LOGIN :
+      console.log('reducers ', action);
       return {
-        loggedIn : true
+        loggedIn : action.pass
       }
     default:
       return state

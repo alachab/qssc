@@ -1,6 +1,6 @@
 import localforage from 'localforage';
 
-var Api = function(){
+var Api = (function(){
 
   var isSync = false;
 
@@ -46,6 +46,6 @@ var Api = function(){
 
   return {getItem, setItem, store, getKey};
 
-};
+})();
 
-export default new Api;
+export default Api;

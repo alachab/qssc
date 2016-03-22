@@ -9,6 +9,7 @@ import DateComponent from './components/DateComponent';
 import ListAdhanTimeComponent from './components/ListAdhanTimeComponent';
 import NextComponent from './components/NextComponent';
 
+import store from '../stores';
 import Api from '../services/api';
 
 var AppComponent = React.createClass({

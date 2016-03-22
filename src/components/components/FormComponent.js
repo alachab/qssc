@@ -4,6 +4,9 @@ import React from 'react';
 import { browserHistory } from 'react-router';
 import admin from '../../models/admin';
 
+import store    from '../../stores';
+import {logIn}  from '../../actions';
+
 require('styles/components/Form.css');
 
 var FormComponent = React.createClass({
@@ -19,17 +22,25 @@ var FormComponent = React.createClass({
     var pass = this.state.pass.trim();
 
     if (!pass || !user) {
+      store.dispatch(logIn(false));
       return;
     }
 
     if( pass !== admin.pass && user !== admin.user ){
+      store.dispatch(logIn(false));
       this.setState({user: '',pass: ''});
       return;
     }
 
-    //TODO : store login session
+    store.dispatch(logIn(true));
     browserHistory.push('/admin/success');
+    
+  },
 
+  componentDidMount: function() {
+    store.subscribe(() => {
+        console.log('state ', store.getState());
+    })
   },
 
   handlePassword : function(evt){
