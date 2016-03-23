@@ -8,8 +8,8 @@ import Success  from './components/modules/Success';
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={App}></Route>
-    <Route path="admin" component={Admin}></Route>
-    <Route path="/admin/success" component={Success}></Route>
+    <Route name="qssc" path="/" component={App}></Route>
+    <Route name="qssc-admin" path="/admin" component={Admin}></Route>
+    <Route name="qssc-admin-success" path="/admin/success" component={Success}></Route>
   </Router>
 ), document.getElementById('app'));

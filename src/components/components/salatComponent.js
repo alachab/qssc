@@ -16,13 +16,19 @@ var SalatComponent = React.createClass({
   },
 
   handleChange(hours, minutes){
-      console.log('SalatComponent : handleChange', arguments);
       store.dispatch( updateIqama(this.props.label, this._getIqama(hours,minutes) ) );
   },
 
   _getIqama(h, m){
     let ampm = this.props.label === 'fajr' ? 'AM' : 'PM';
+    h = this._zeroPad(h, 2);
+    m = this._zeroPad(m, 2);
     return  `${h}:${m} ${ampm}`;
+  },
+
+  _zeroPad(num, places) {
+    var zero = places - num.toString().length + 1;
+    return Array(+(zero > 0 && zero)).join("0") + num;
   },
 
   _getTime(){
@@ -30,7 +36,6 @@ var SalatComponent = React.createClass({
     var data = this.props.time.split(':');
     var h = parseInt(data[0], 10);
     var m = parseInt(data[1].split(' ')[0], 10);
-    console.log('_getTime ', data);
     return{h, m};
   },
 

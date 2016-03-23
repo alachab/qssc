@@ -12,6 +12,6 @@ export function logIn(pass) {
 }
 
 
-export function updateIqama(salat, time) {
-  return { type: UPDATE_IQAMA, payload : {salat, time} }
+export function updateIqama(iqama, time) {
+  return { type: UPDATE_IQAMA, payload : {iqama, time} }
 }

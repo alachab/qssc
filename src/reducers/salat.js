@@ -5,7 +5,7 @@ const salat = (state = {}, action) => {
     case UPDATE_IQAMA :
       console.log('reducers ', action);
       return {
-        salat : action.payload.salat,
+        iqama : action.payload.iqama,
         time : action.payload.time
       }
 

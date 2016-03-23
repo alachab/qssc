@@ -11,14 +11,12 @@ import NextComponent from './components/NextComponent';
 
 import Api from '../services/api';
 
-import store from '../stores';
-
 var AppComponent = React.createClass({
 
   getInitialState() {
     return { qssc: {} };
   },
-  
+
   componentWillMount(){
     Api.store();
   },
@@ -27,11 +25,6 @@ var AppComponent = React.createClass({
     Api.getItem( Api.getKey() ).then((qssc) => {
       this.setState({qssc:qssc});
     });
-
-    store.subscribe(() => {
-        console.log('state ', store.getState());
-    });
-
   },
 
   render() {
