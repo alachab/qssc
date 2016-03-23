@@ -3,7 +3,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import AdComponent from './AdComponent';
+import Ad from './AdComponent';
 import Api from '../../services/api';
 
 require('styles/components/Date.css');
@@ -24,7 +24,7 @@ var DateComponent = React.createClass({
     return (
       <div className="item flex flex-column date">
         <div className="item label">{moment().format('MMMM Do YYYY')}</div>
-        <AdComponent title={this.state.ad.title} content={this.state.ad.content}></AdComponent>
+        <Ad title={this.state.ad.title} content={this.state.ad.content}></Ad>
       </div>
     );
   }

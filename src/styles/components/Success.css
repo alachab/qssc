@@ -1,0 +1,16 @@
+.ReactTabs__TabList{
+  display: flex;
+}
+
+.ReactTabs__Tab{
+  flex-grow: 1;
+  text-align: center;
+  font-size: 20px;
+  color: #e74c3c;
+}
+
+.ReactTabs__Tab--selected{
+  background: #e74c3c !important;
+  color: #ecf0f1 !important;
+  border-color:transparent !important; 
+}

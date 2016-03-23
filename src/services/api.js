@@ -9,7 +9,8 @@ var Api = (function(){
     dhuhr : '01:45 PM',
     asr : '05:45 PM',
     maghrib : '07:30 PM',
-    isha : '09:00 PM'
+    isha : '09:00 PM',
+    Jumuah : '01:30 PM'
   };
 
   var ad = {
@@ -36,12 +37,13 @@ var Api = (function(){
     });
   }
 
-  function getItem(key="qssc"){
+  function getItem(key='qssc'){
     return localforage.getItem(key);
   }
 
-  function setItem(key, value){
-    return localforage.getItem(key);
+  function setItem(value, key='qssc'){
+    console.log('api setItem ', value);
+    return localforage.setItem(key, value);
   }
 
   return {getItem, setItem, store, getKey};
