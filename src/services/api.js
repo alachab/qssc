@@ -14,7 +14,6 @@ var Api = (function(){
   };
 
   var ad = {
-    title : '',
     content : ''
   };
 

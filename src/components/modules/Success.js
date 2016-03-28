@@ -16,29 +16,40 @@ require('styles/components/Success.css');
 var SuccessComponent = React.createClass({
 
   getInitialState() {
-    return {qssc: ''};
+    return {qssc: {}, ad : {}};
   },
 
   _getSalatTime(state){
     var output = {};
+    if( !state.iqama ){
+      return output;
+    }
     output[state.iqama] = state.time;
     return output;
   },
 
   componentDidMount(){
     store.subscribe(() => {
-      var state = store.getState().salat;
-      var salat = this._getSalatTime(state);
+      var _store = store.getState();
+      var salat = this._getSalatTime(_store.salat);
       var qssc = Object.assign({}, this.state.qssc, salat );
       Api.setItem(qssc).then(() => {
         this.setState({qssc});
+      });
+      var ad = Object.assign({}, this.state.ad, _store.ad );
+      console.log('_store.ad ', _store.ad);
+      Api.setItem(_store.ad, 'qssc-ad').then(() => {
+        this.setState({ad});
       });
     });
   },
 
   componentWillMount(){
     Api.getItem().then( qssc => {
-        this.setState({qssc:qssc});
+        this.setState({qssc});
+    });
+    Api.getItem('qssc-ad').then( ad => {
+        this.setState({ad});
     });
   },
 

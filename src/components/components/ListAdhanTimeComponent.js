@@ -14,32 +14,32 @@ var ListAdhanTimeComponent = React.createClass({
           <ul className="item flex">
             <li className="item flex label sep">
                 <ul className="inner-list flex flex-column">
-                  <li className="item">fajr</li>
-                  <li className="item">{qssc.fajr}</li>
+                  <li className="item flex flex-column"><h4 className="item">fajr</h4></li>
+                  <li className="item flex flex-column"><h4 className="item">{qssc.fajr}</h4></li>
                 </ul>
             </li>
             <li className="item flex label sep">
                 <ul className="inner-list flex flex-column">
-                  <li className="item">dhuhr</li>
-                  <li className="item">{qssc.dhuhr}</li>
+                  <li className="item flex flex-column"><h4 className="item">dhuhr</h4></li>
+                  <li className="item flex flex-column"><h4 className="item">{qssc.dhuhr}</h4></li>
                 </ul>
             </li>
             <li className="item flex label sep">
                 <ul className="inner-list flex flex-column">
-                  <li className="item">asr</li>
-                  <li className="item">{qssc.asr}</li>
+                  <li className="item flex flex-column"><h4 className="item">asr</h4></li>
+                  <li className="item flex flex-column"><h4 className="item">{qssc.asr}</h4></li>
                 </ul>
             </li>
             <li className="item flex label sep">
                 <ul className="inner-list flex flex-column">
-                  <li className="item">maghrib</li>
-                  <li className="item">{qssc.maghrib}</li>
+                  <li className="item flex flex-column"><h4 className="item">maghrib</h4></li>
+                  <li className="item flex flex-column"><h4 className="item">{qssc.maghrib}</h4></li>
                 </ul>
             </li>
             <li className="item flex label">
                 <ul className="inner-list flex flex-column">
-                  <li className="item">isha</li>
-                  <li className="item">{qssc.isha}</li>
+                  <li className="item flex flex-column"><h4 className="item">isha</h4></li>
+                  <li className="item flex flex-column"><h4 className="item">{qssc.isha}</h4></li>
                 </ul>
             </li>
           </ul>
