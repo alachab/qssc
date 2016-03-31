@@ -1,7 +1,7 @@
 import React      from 'react';
 import ReactTabs  from 'react-tabs';
 import Salat      from '../components/SalatComponent';
-import AD         from '../components/AdComponent';
+import AdForm     from '../components/AdFormComponent';
 import store      from '../../stores';
 import Api        from '../../services/api';
 
@@ -77,7 +77,7 @@ var SuccessComponent = React.createClass({
           </div>
         </TabPanel>
         <TabPanel>
-          <AD isEdit={true} />
+          <AdForm />
         </TabPanel>
 
       </Tabs>
